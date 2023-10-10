@@ -1,0 +1,32 @@
+{
+  "name": "template_nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prisma": "node lib/prisma",
+    "mysql": "node mysql",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^4.23.5",
+    "@next/mdx": "^13.4.19",
+    "@prisma/client": "^5.3.1",
+    "bootstrap": "^5.3.2",
+    "clerk": "^0.8.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.1",
+    "next": "13.4.19",
+    "next-mdx-remote": "^4.4.1",
+    "next-themes": "^0.2.1",
+    "prisma": "^5.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.67.0",
+    "simple-parallax-js": "^5.6.2",
+    "styled-components": "^6.0.8"
+  }
+}

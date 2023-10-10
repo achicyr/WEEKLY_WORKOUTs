@@ -1,0 +1,155 @@
+.heroes{
+    @extend .px-4;
+    @extend .pt-5;
+    @extend .my-5;
+    @extend .text-center;
+    @extend .border-bottom;
+    &.--dark{@extend %dark;}
+    &.--vcenter{
+        @extend .container;
+        >article{
+            @extend .col-lg-7;
+            >h1{
+                @extend .col-lg-12; 
+                font-size: calc(1.475rem + 2.7vw);
+                font-weight: 700!important;
+                line-height: 1!important;
+                margin-bottom: 1rem!important;
+            }
+            >p{
+                @extend .col-lg-10; 
+                font-size: calc(1.275rem + .3vw)!important; // @extend .fs-4; 
+            }
+        }
+        >form{
+            @extend .mx-auto;
+            @extend .col-md-10;
+            @extend .col-lg-5;
+            @extend .p-4;
+            @extend .p-md-5;
+            @extend .border;
+            @extend .bg-light;
+            border-radius: .3rem!important; // @extend .rounded-3;
+            display: block !important;
+            >fieldset{
+                @extend %b5_fieldset01;
+            }
+            >button{
+                @extend .btn-primary;
+                @extend .w-100;
+            }
+        }
+        @include from-desktop(map-get($b5_breakpoints,tablette)+"px"){
+            display: flex;
+            text-align: left !important;
+            align-items: center;
+        }
+    }
+    &.--center{
+        @extend .container;
+        @extend .px-5;
+        >*:not(div){
+            @extend .col-lg-6;
+            @extend .mx-auto;
+        }
+        >form{
+            @extend .d-grid;
+        }
+        >div{
+            @extend .overflow-hidden;
+            max-height: 30vh;
+        }
+        
+    }
+    &.--wImage{
+        @extend .col-md-10;
+        @extend .mx-auto;
+        @extend %dfr-vc;
+        flex-wrap: wrap;
+        text-align: left !important;
+        // >*{@extend .col-12;}
+        >div{@extend .col-10;@extend .col-sm-8;@extend .col-lg-6;}
+        >article{
+            @extend .col-lg-6;
+            >form{
+                flex-wrap: wrap;
+                justify-content: start !important;
+                @include to-tablette(map-get($b5_breakpoints,tablette)+"px"){
+                    button{width: 100%;margin-bottom:1.5rem !important;}
+                }
+            }
+        }
+        @include to-desktop(map-get($b5_breakpoints,desktop)+"px"){
+            >div{order:1;}
+            >article{order:2;}
+        }
+        &.--shadow{
+            @extend .shadow-lg;
+            padding-right: 0!important; // @extend .pe-lg-0;
+            border-radius: .3rem!important; // @extend .rounded-3;
+            >article{
+                @extend .col-lg-7;
+                @extend .p-3;
+                @extend .p-lg-5;
+                @extend .pt-lg-3;
+            }
+            >div{
+                @extend .col-lg-4;
+                @extend .offset-lg-1;
+                @extend .p-0;
+                @extend .overflow-hidden;
+                @extend .shadow-lg;
+                >img{
+                    width: unset;
+                }
+                @include to-desktop(map-get($b5_breakpoints,desktop)+"px"){
+                    flex-basis: 100%;
+                    max-width: calc(100% - 15px);
+                }
+            }
+            @include to-desktop(map-get($b5_breakpoints,desktop)+"px"){
+                >div{order:2;}
+                >article{order:1;}
+            }
+        }
+    }
+    >img{
+        @extend .d-block;
+        @extend .mx-auto;
+        @extend .mb-4;
+        
+        object-fit: contain;
+    }
+    >h1,>article>h1{
+        font-size: calc(1.425rem + 2.1vw);font-weight: 300;line-height: 1.2; // @extend .display-5;
+        font-weight: 700!important; // @extend .fw-bold;
+    }
+    >p,>article>p{
+        @extend .lead;
+        @extend .mb-4;
+    }
+    >form,>article>form{
+        @extend .d-md-flex;
+        @extend .justify-content-md-center;
+        @extend .mb-5;
+        gap: .5rem!important; // @extend .gap-2;
+        >button{
+            @extend .btn;
+            @extend .btn-lg;
+            @extend .px-4;
+            &:first-child{@extend .btn-primary;}
+            &:last-child{@extend .btn-outline-secondary;}
+        }
+    }
+    >div{ 
+        >img{
+            // @extend .img-fluid;
+            @extend .border;
+            border-radius: .3rem!important; // @extend .rounded-3;
+            @extend .shadow-lg;
+            @extend .mb-4;
+        }
+        
+    }
+    
+}

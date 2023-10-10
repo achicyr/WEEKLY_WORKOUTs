@@ -1,0 +1,26 @@
+%ff_icon0{
+    font-family: 'LineIcons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.btn{text-transform: uppercase;white-space: nowrap;}
+
+
+
+@mixin newRowList($grid:(4 6 12)){
+    @extend .row;
+    >li{
+        @extend .col-lg-#{nth($grid,1)};
+        @extend .col-md-#{nth($grid,2)};
+        @extend .col-#{nth($grid,3)};
+    }
+}
