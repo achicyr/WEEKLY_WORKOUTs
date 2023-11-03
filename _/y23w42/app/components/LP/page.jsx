@@ -5,8 +5,10 @@ import FeaturesOurServices_copy from './index/FeaturesOurServices_copy'
 import CTAPurchase from './index/CTAPurchase'
 // import FeaturesWhyUs from './index/FeaturesWhyUs'
 import FeaturesWhyUs_copy from './index/FeaturesWhyUs_copy'
+
 // import JumbotronVideo from './index/JumbotronVideo'
-import JumbotronVideo_copy from './index/JumbotronVideo_copy'
+// import JumbotronVideo_copy from './index/JumbotronVideo_copy'
+
 // import FilterOurWorks from './index/FilterOurWorks'
 import FilterOurWorks_copy from './index/FilterOurWorks_copy'
 // import PricingPlans from './index/PricingPlans'
@@ -31,8 +33,10 @@ export default function Home() {
       <CTAPurchase />
       {/* <FeaturesWhyUs /> */}
       <FeaturesWhyUs_copy />
+
       {/* <JumbotronVideo /> */}
-      <JumbotronVideo_copy />
+      {/* <JumbotronVideo_copy /> */}
+      
       {/* <FilterOurWorks /> */}
       <FilterOurWorks_copy />
       {/* <PricingPlans /> */}

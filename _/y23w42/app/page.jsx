@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Hello from "./Hello.mdx"
+// import Hello from "./Hello.mdx"
 import styles from './page.module.scss'
 import {getAllUsers,getAllPosts} from "@/lib/prisma"
+// import LP from './components/LP/page'
+import {HeroesVCenter as B5Comp} from './components/Heroes'
 
 export default async function Home() {
 
@@ -18,8 +20,11 @@ export default async function Home() {
       {JSON.stringify(posts)}
       {JSON.stringify(post)}
       <hr />
-      <Hello />
+      {/* <Hello /> */}
       <div>deoijoifdjoijfds</div>
+      <hr />
+      {/* <LP /> */}
+      <B5Comp />
     </main>
   )
 }
