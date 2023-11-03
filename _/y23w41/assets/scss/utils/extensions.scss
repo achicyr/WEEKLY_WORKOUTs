@@ -1,4 +1,6 @@
+%w0{width: 0%;}
 %w100{width: 100%;}
+%h0{height: 0%;}
 %h100{height: 100%;}
 
 
@@ -50,6 +52,32 @@
 %pe_ba{&::before{content:"";} &::after{content:"";}}
 
 %after_cover{position:relative;&:after{content:"";z-index:100;@extend %goa_trbl;}}
+%h_b_coverEffect{
+    position: relative;
+    &:hover::before{
+        @extend %w100;
+    }
+    &::before{
+        content:"";
+        @extend %goa_tbl;
+        @extend %w0;
+        z-index: -1;
+        transition: all .25s, width .4s;
+    }
+}
+%a_b_clickEffect{
+    &:active{
+        &:before{
+            background:white !important;
+        }
+        color:$primary !important;
+        >*{color:$primary !important;}
+    }
+}
+%ha_b_effects{
+    @extend %h_b_coverEffect;
+    @extend %a_b_clickEffect;
+}
 
 
 
@@ -64,9 +92,13 @@
 /* **/
 //NEW  flex RULES SYSTEM 
 %df{display: flex;}
-%dfc{@extend %df;flex-flow: column;}
-%dfw{display: flex;flex-wrap:wrap;}
-%dfcw{@extend %df;flex-flow: column wrap;}
+%ffr{flex-flow:row;}
+%ffc{flex-flow:column;}
+%fw{flex-wrap:wrap;}
+%fcw{flex-wrap:wrap;}
+%dfc{@extend %df;@extend %ffc;}
+%dfw{@extend %df;@extend %fw;}
+%dfcw{@extend %df;@extend %fcw;}
 %dfr-cc{@extend %df;   justify-content: center;align-items: center;}
 %dfr-hc{@extend %df;   justify-content: center;}
 %dfr-vc{@extend %df;   align-items: center;}
@@ -79,6 +111,12 @@
 %dfc-cc100{@extend %dfc;@extend %h100;  justify-content: center;align-items: center;}
 %dfc-hc100{@extend %dfc;@extend %h100;  align-items: center;}
 %dfc-vc100{@extend %dfc;@extend %h100;  justify-content: center;}
+%dfr-jcsb{@extend %df;   justify-content: space-between;}
+%dfr-jcsb_{@extend %df;   justify-content: space-between;align-items: center;}
+%dfr-jcsa{@extend %df;   justify-content: space-around;}
+%dfr-jcsa_{@extend %df;   justify-content: space-around;align-items: center;}
+%dfr-jcse{@extend %df;   justify-content: space-evenly;}
+%dfr-jcse_{@extend %df;   justify-content: space-evenly;align-items: center;}
 
 
 

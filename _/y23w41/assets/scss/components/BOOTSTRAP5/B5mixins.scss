@@ -1,8 +1,18 @@
 input:not(.safe){@extend .form-control;}
+input[type="checkbox"]:not(.safe),input[type="radio"]:not(.safe){@extend .form-check-input;padding:unset !important;height:1rem !important;}
+select:not(.safe){@extend .form-select;}
+button:not(.safe){@extend .btn;}
 
 
 
 %dark{color:white;background:$darkmode;}
+%bd-placeholder-img{
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
 %b5_fieldset01{
     @extend .mb-3;
     position: relative;
@@ -70,11 +80,37 @@ input:not(.safe){@extend .form-control;}
         }
     }
 }
+%paddingWBefore{
+    &>*{position: relative;}
+    &:hover:before{
+        box-shadow: 0 0.125rem 1.25rem 1px rgba(0, 0, 0, 0.075) !important
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0rem;
+        left: 1rem;
+        right: 1rem;
+        height: 100%;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        transition: all .3s;
+    }
+}
 
 
 
+.bi{vertical-align: -0.125em;fill: currentColor;}
+.me-2{margin-right: 0.5rem !important;}
 .btn{text-transform: uppercase;white-space: nowrap;}
 .d-grid {display: grid!important;}
+.fw-normal{font-weight: 400!important;}
+.fs-5{font-size: 1.25rem!important;}
+.shadow-sm{box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;}
+.rounded-3{border-radius: .3rem!important;}
+.fw-light{font-weight: 300!important;}
+.display-4{font-size: calc(1.475rem + 2.7vw);font-weight: 300;line-height: 1.2;}
+.text-muted{color:#6c757d!important;}
 
 
 @mixin newRowList($grid:(4 6 12)){

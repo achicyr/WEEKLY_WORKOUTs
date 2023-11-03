@@ -4,9 +4,10 @@
 
 $black: black;
 $white: white;
-$dark: #eaeaea;
-$bright: #eaeaea;
 $darkmode: rgba(33,37,41,1);
+// $dark: #eaeaea;
+$dark: $darkmode;
+$bright: #eaeaea;
 
 $black1: lighten($black,10%);
 $black2: lighten($black,20%);
